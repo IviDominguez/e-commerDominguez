@@ -1,7 +1,7 @@
 
 const CartWidget = () =>{
     return(
-        <img style={{width: "80px", height: "70px", marginRight: "3rem"}} src="/iconoCarrito2.png" alt="icono" />
+        <img style={{width: "60px", height: "50px", marginRight: "3rem"}} src="/iconoCarrito2.png" alt="icono" />
     )
 }
 
