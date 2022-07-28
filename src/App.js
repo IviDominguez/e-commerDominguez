@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <ItemListContainer greeting = "Tu PokeTienda!" />
-      <ItemCount />
+      
     </div>
   );
 }
