@@ -15,19 +15,24 @@ const ItemListContainer = ({greeting}) =>{
         })
     }, [])
 
+    const onAdd = (cant) => {
+        console.log(`Agregaste ${cant} items al carrito`);
+    }
+
 
     return(
         <div>
             <h2 
                 style={{backgroundColor: "rgb(155, 97, 179)",
-                width: "230px",
-                borderRadius: "18px", 
-                fontSize: "25", 
-                fontFamily: 'Franklin Gothic Medium',
-                margin: "3rem", 
-                paddingLeft: "6px"}}
+                        width: "230px",
+                        borderRadius: "18px", 
+                        fontSize: "25", 
+                        fontFamily: 'Franklin Gothic Medium',
+                        margin: "3rem", 
+                        paddingLeft: "6px"}}
                 >{greeting}</h2>
-                <ItemCount />
+
+                <ItemCount initial={1} stock={5} onAdd={onAdd}/>
                 <ItemList items = {items} />
         </div>
     )
