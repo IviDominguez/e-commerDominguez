@@ -2,23 +2,27 @@ import ItemCount from "./ItemCount";
 import { useEffect } from "react";
 import { useState } from "react";
 import ItemList from "./ItemList";
-import ItemDetailContainer from "./ItemDetailContainer";
+import { data } from "../mocks/FakeApi";
+
 
 const ItemListContainer = ({greeting}) =>{
-    const [items, setItems] = useState ([])
 
-    useEffect (( ) => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            setItems (data)
-        })
-    }, [])
+    const [listProducts, setListProducts] = useState ([])
+    const [loading, setLoading] = useState (true)
 
     const onAdd = (cant) => {
         console.log(`Agregaste ${cant} items al carrito`);
     }
+    
+    
+
+    useEffect(()=>{
+        data
+        .then((res) => setListProducts(res))
+        .catch((error) => console.log(error))
+        .finally(()=> setLoading(false))
+    },[])
+    console.log(listProducts)
 
 
     return(
@@ -31,11 +35,14 @@ const ItemListContainer = ({greeting}) =>{
                         fontFamily: 'Franklin Gothic Medium',
                         margin: "3rem", 
                         paddingLeft: "6px"}}
-                >{greeting}</h2>
+                >{greeting}
+            </h2>
 
-                <ItemCount initial={1} stock={5} onAdd={onAdd}/>
-                <ItemList items = {items} />
-                <ItemDetailContainer />
+            { loading ? <p>Cargando...</p> : <ItemList listProducts = {listProducts} />} 
+            
+            <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+            
+
         </div>
     )
     

@@ -8,12 +8,13 @@ import { useState } from "react";
 import ItemCount from './components/ItemCount';
 
 
+
 function App() {
   return (
     <div className="App">
       <NavBar/>
       <ItemListContainer greeting = "Tu PokeTienda!" />
-      
+
     </div>
   );
 }
