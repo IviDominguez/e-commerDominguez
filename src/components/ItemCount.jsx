@@ -25,7 +25,8 @@ const ItemCount = ({initial, stock, onAdd }) => {
     <div style={{
                 display:'flex', 
                 alignItems:'center',
-                margin: " 0 0 1rem 6rem",
+                justifyContent: "center",
+                margin: " 0 0 1rem 1rem",
                 }}>
 
         <button style={{width: "40px",
@@ -56,16 +57,26 @@ const ItemCount = ({initial, stock, onAdd }) => {
                         >+</button>
     </div>
 
-    <button style={{width: "80px",
+    <div style={{
+                display:'flex', 
+                alignItems:'center',
+                justifyContent: "center",
+                marginBottom: "1rem",
+                }}>
+        <button style={{
+                    width: "80px",
                     height: "40px",
                     borderRadius: "10px",
                     backgroundColor: 'rgb(155, 97, 179)',
                     fontFamily: 'Franklin Gothic Medium',
                     fontSize: "15px",
-                    margin: "0 0 1rem 7.2rem",
+                    margin: "0 0 1rem 1rem",
                     }} 
                     onClick={()=>onAdd(contador)}
                     >Comprar</button>
+    </div>
+
+    
     </>
     )
 }

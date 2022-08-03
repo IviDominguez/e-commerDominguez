@@ -4,8 +4,8 @@ import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ItemListContainer from "./components/ItemListContainer";
-import { useState } from "react";
-import ItemCount from './components/ItemCount';
+import ItemDetailContainer from "./components/ItemDetailContainer";
+
 
 
 
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <ItemListContainer greeting = "Tu PokeTienda!" />
-
+      <ItemDetailContainer/>
     </div>
   );
 }

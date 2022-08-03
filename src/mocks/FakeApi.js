@@ -4,7 +4,7 @@ const products = [
     {
         id: 1,
         name: "Pikachu",
-        description: "Peluche pokemon",
+        description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color amarillo.",
         price: 50,
         stock: 5,
         img: "https://i.postimg.cc/QxXGQvQq/D-NQ-NP-904692-MLA50566360688-072022-O.webp",
@@ -71,27 +71,3 @@ export const data = new Promise((resolve, reject) =>{
 })
 console.log (data)
 
-
-
-
-
-
-
-
-
-
-
-
-/*export const mock = () => {
-    const task = new Promise ((resolve) => {
-        setTimeout(() => resolve(product), 2000)
-    })
-    return task
-}
-
-export const getItem = () => {
-    const task = new Promise ((resolve) => {
-        setTimeout(() => resolve(product[1]), 2000)
-    })
-    return task
-}*/
