@@ -23,8 +23,8 @@ const NavBar = () =>{
         <p className="link dropdown-toggle" role="button" data-bs-toggle="dropdown" 
             aria-expanded="false">Productos</p>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><Link className="dropdown-item" to="/categoria/:category">Peluches</Link></li>
-            <li><Link className="dropdown-item" to="/categoria/:category">Unicos</Link></li>
+            <li><Link className="dropdown-item" to="/categoria/Peluches">Peluches</Link></li>
+            <li><Link className="dropdown-item" to="/categoria/Unicos">Unicos</Link></li>
             <li><Link className="dropdown-item" to="/productos">Todos los productos</Link></li>
             </ul>
         </li>
