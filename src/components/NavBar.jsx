@@ -1,25 +1,24 @@
 import CartWidget from "./CartWidget";
 
+import { Link } from "react-router-dom";
+
 
 const NavBar = () =>{
     return(
-        <nav className="navbar">
-            <a href="index.html"> 
+        <nav className="navBar">
+            <Link to="/"> 
                     <img src="/logoPoke.png" alt="logo" className="logo"></img>
-            </a>
+            </Link>
             <div className="items">
-                <a className="link" href="#">Productos</a>
-
-                <a className="link" href="#">150 o más!</a>
-
-                <a className="link" href="#">Contacto</a>
+                <Link className="link" to="/">Home</Link>
+                <Link className="link" to="/productos">Productos</Link>
+                <Link className="link" to="/pokemons">150 o más!</Link>
+                
             </div>
             <CartWidget />
 
         </nav>
-        
-
-        
+            
     )
 
 }
@@ -28,32 +27,3 @@ const NavBar = () =>{
 export default NavBar;
 
 
-
-
-
-//no me toma los estilos utilizando nav ul li
-
-/* const NavBar = () =>{
-    return(
-        <nav className="navbar">
-
-
-                <a href="index.html"> 
-                    <img src="/logoPoke.png" alt="logo" className="logo" />
-                </a>
-                <ul className="items">
-                    <li>
-                        <a className="link" href="#">Productos</a>
-                    </li>
-                    <li>
-                        <a className="link" href="#">150 o más!</a>
-                    </li>
-                    <li>
-                        <a className="link" href="#">Contacto</a>
-                    </li>
-                </ul>
-
-        </nav>
-    )
-
-}*/
