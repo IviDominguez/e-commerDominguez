@@ -75,5 +75,5 @@ export const data = new Promise((resolve, reject) =>{
 
     },2000)
 })
-console.log (data)
+
 

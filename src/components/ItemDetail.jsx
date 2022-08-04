@@ -3,8 +3,8 @@ import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
 
 const ItemDetail = ({product}) => {
-    const onAdd = () => {
-        console.log("Agregaste al carrito")
+    const onAdd = (cant) => {
+        console.log(`Agregaste ${cant} items al carrito`);
     }
     const volver = useNavigate()
 

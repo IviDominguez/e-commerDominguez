@@ -3,26 +3,32 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ItemList from "./ItemList";
 import { data } from "../mocks/FakeApi";
+import { useParams } from "react-router-dom";
 
 
 const ItemListContainer = ({greeting}) =>{
 
     const [listProducts, setListProducts] = useState ([])
     const [loading, setLoading] = useState (true)
+    const { category } = useParams ()
 
-    const onAdd = (cant) => {
-        console.log(`Agregaste ${cant} items al carrito`);
-    }
+
     
     
 
     useEffect(()=>{
         data
-        .then((res) => setListProducts(res))
+        .then((res) => {
+            if(!category){
+                setListProducts(res)
+            }else{
+                setListProducts(res.filter((product)=> product.category === category))
+            }
+        }) 
         .catch((error) => console.log(error))
         .finally(()=> setLoading(false))
-    },[])
-    console.log(listProducts)
+    },[category])
+
 
 
     return(
