@@ -1,11 +1,22 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ItemDetail = ({product}) => {
-    const onAdd = (cant) => {
+    const navigate = useNavigate()
+    const [count, setCount] = useState(0)
+    /*const onAdd = (cant) => {
         console.log(`Agregaste ${cant} items al carrito`);
+    }*/
+    
+    const handleAdd = (quantityToAdd) => {
+        console.log("handle add", quantityToAdd);
+        setCount(quantityToAdd)
+        console.log(count)
+        navigate("/cart")
     }
+    
     const volver = useNavigate()
 
     return(
@@ -26,7 +37,7 @@ const ItemDetail = ({product}) => {
                         paddingLeft: "2rem",}}
             >{product.description}</p>
 
-            <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+            <ItemCount stock={product.stock} initial={1} onAdd={handleAdd} />
 
             <button style={{
                     width: "80px",

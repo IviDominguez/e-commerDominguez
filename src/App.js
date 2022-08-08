@@ -20,6 +20,7 @@ function App() {
         <Route path="/productos" element={<ItemListContainer greeting = "Tu PokeTienda!" />}></Route>
         <Route path="/categoria/:category" element={<ItemListContainer greeting = "Tu PokeTienda!" />}></Route>
         <Route path="/detalle/:id" element={<ItemDetailContainer/>}></Route>
+        <Route path="/cart" element={<h1>Productos agregados correctamente!</h1>}></Route>
       </Routes>
     </BrowserRouter>
   );

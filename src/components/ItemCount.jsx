@@ -1,23 +1,28 @@
 
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
 
 const ItemCount = ({initial, stock, onAdd }) => {
-    const [contador, setContador] = useState(initial)
+    const [count, setCount] = useState(initial)
 
 
     const sumar = () => {
-        if(contador < stock){
-            setContador(contador + 1)
+        if(count < stock){
+            setCount(count + 1)
         }
     }
 
     const restar = () => {
-        if(contador > initial ){
+        if(count > initial ){
 
-            setContador(contador - 1)
+            setCount(count - 1)
         } 
     }
+
+    useEffect(() => {
+        setCount(initial)
+    },[initial])
     
 
     return (
@@ -43,7 +48,7 @@ const ItemCount = ({initial, stock, onAdd }) => {
         <span style={{fontFamily: 'Franklin Gothic Medium',
                     fontSize: "15px",
                     }}
-                    >{contador}</span>
+                    >{count}</span>
 
         <button style={{width: "40px",
                         height: "30px",
@@ -72,8 +77,8 @@ const ItemCount = ({initial, stock, onAdd }) => {
                     fontSize: "15px",
                     margin: "0 0 1rem 1rem",
                     }} 
-                    onClick={()=>onAdd(contador)}
-                    >Comprar</button>
+                    onClick={()=>onAdd(count)}
+                    >Agregar</button>
     </div>
 
     
