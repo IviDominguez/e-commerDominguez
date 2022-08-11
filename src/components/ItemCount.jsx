@@ -1,12 +1,9 @@
 
 import React from 'react'
-import { useEffect } from 'react'
 import { useState } from 'react'
 
-const ItemCount = ({initial, stock, onAdd }) => {
-    const [count, setCount] = useState(initial)
-
-
+const ItemCount = ({ stock, onAdd, count, setCount }) => {
+    
     const sumar = () => {
         if(count < stock){
             setCount(count + 1)
@@ -14,15 +11,11 @@ const ItemCount = ({initial, stock, onAdd }) => {
     }
 
     const restar = () => {
-        if(count > initial ){
+        if(count > 0 ){
 
             setCount(count - 1)
         } 
     }
-
-    useEffect(() => {
-        setCount(initial)
-    },[initial])
     
 
     return (
@@ -77,7 +70,7 @@ const ItemCount = ({initial, stock, onAdd }) => {
                     fontSize: "15px",
                     margin: "0 0 1rem 1rem",
                     }} 
-                    onClick={()=>onAdd(count)}
+                    onClick={onAdd}
                     >Agregar</button>
     </div>
 

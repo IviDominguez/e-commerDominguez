@@ -1,9 +1,12 @@
 import CartWidget from "./CartWidget";
 
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 
 const NavBar = () =>{
+  const { cart } = useCart()
+  
     return(
         <nav className="navbar navbar-expand-lg navBar">
   <div className="container-fluid">
