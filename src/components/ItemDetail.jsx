@@ -2,38 +2,32 @@ import React from "react";
 import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useCart } from "../context/CartContext";
 
-const ItemDetail = ({productDetail}) => {
-    const {name, description, img, price, stock} = productDetail
+const ItemDetail = ({product}) => {
+    const { id, name, description, img, price, stock } = product
     const [count, setCount] = useState(0)
     const [buy, setBuy] = useState(false)
-    //const [quantity, setQuantity] = useState(0)
+
     const navigate = useNavigate()
     const volver = useNavigate()
     
-    //const { addItem } = useCart ()
+    const { addItem } = useCart ()
     
     
     const onAdd = () => {
-        /*let itemToBuy = {
+        let itemToBuy = {
             id,
             name,
             img,
             price,
-            cantidad: quantity
-        }*/
+            quantity: count
+        }
         setBuy(true)
-        //setQuantity(quantityToAdd)
-        //addItem(itemToBuy)
-        //navigate("/cart")
-    }
 
-    /*useEffect (() => {
-        console.log(quantity)
-    },[quantity])*/
-    
+        addItem(itemToBuy)
+
+    }
     
     
     return(
@@ -84,7 +78,7 @@ const ItemDetail = ({productDetail}) => {
 
             </div>
             
-            : <ItemCount initial={1} stock={productDetail.stock} onAdd={onAdd} count={count} setCount={setCount} />}
+            : <ItemCount initial={1} stock={product.stock} onAdd={onAdd} count={count} setCount={setCount} />}
 
             <button style={{
                     width: "80px",

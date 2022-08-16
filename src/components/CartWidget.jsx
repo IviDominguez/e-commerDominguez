@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import React from "react";
+import { useCart } from "../context/CartContext";
 
 const CartWidget = () =>{
-    const valueToShare = useContext(CartContext)
+        const { cartQuantity } = useCart()
     return(
         <>
         <div style={{display: "flex",
@@ -13,7 +13,7 @@ const CartWidget = () =>{
                         }} src="/iconoCarrito2.png" alt="icono" />
             <h4 style={{color: "black",
                         fontSize: "20px",
-                        marginRight: "3rem",}}>{valueToShare.cantInCart }</h4>
+                        marginRight: "3rem",}}>{cartQuantity() || "" }</h4>
         </div>
 
         </>            

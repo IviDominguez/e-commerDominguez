@@ -8,28 +8,45 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     const addItem = (item) => {
-        setCart([...cart, item])
+        const itemInCart = cart.find((prod)=> prod.id === item.id)
+        if(itemInCart){
+            const updatedCart = cart.map((prod)=>{
+                if(prod.id === item.id){
+                    return {...prod, quantity: prod.quantity + item.quantity}
+                }else{
+                    return prod
+                }
+            })
+            setCart(updatedCart)
+        }else{
+            setCart([...cart, item])
+        }   
     }
+    console.log(cart)
 
-    /*const isInCart = () => {}
-
-    const removeItem = () => {}
+    const isInCart = (id) => {
+        return cart.some((prod) => prod.id === id)
+    }
     
     const cleanCart = () =>{
         setCart([])
     }
+    
+    const removeItem = (id) =>{
+        setCart(cart.filter((prod) => prod.id !== id))
+    }
 
-    const valueToShare = {
-        cart,
-        cantInCart: cart.length,
-        isInCart,
-        addItem,
-        removeItem,
-        cleanCart,
-    }*/
+    const cartQuantity = () =>{
+        return cart.reduce((acc, prod) => acc += prod.quantity,0)
+    }
+
+    const finalPrice = () =>{
+        return cart.reduce((acc, prod) => acc += prod.price * prod.quantity,0)
+    }
+
 
     return(
-        <CartContext.Provider value={{cart, addItem}}>
+        <CartContext.Provider value={{cart, addItem, isInCart, cleanCart, removeItem, cartQuantity, finalPrice}}>
             {children}
         </CartContext.Provider>
     )
