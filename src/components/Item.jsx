@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Item = ({ product }) => {
 
-    const {name, id, description, img, price, stock} = product
+    const {name, id, img, price} = product
     const navegar = useNavigate()
     return(
         <Card style={{ 
@@ -15,7 +15,7 @@ const Item = ({ product }) => {
             borderRadius: "18px",
             fontFamily: 'Franklin Gothic Medium',
             }}>
-        <Card.Img variant="top" src={product.img} alt={name} />
+        <Card.Img variant="top" src={img} alt={name} />
         <Card.Body>
             <Card.Title>{name}</Card.Title>
 
