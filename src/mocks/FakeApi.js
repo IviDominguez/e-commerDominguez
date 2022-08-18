@@ -6,7 +6,7 @@ const products = [
         name: "Pikachu",
         description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color amarillo.",
         price: 100,
-        stock: 10,
+        stock: 15,
         img: "https://i.postimg.cc/xCyFrTxJ/pikachu.jpg",
         category: "Originales",
     },

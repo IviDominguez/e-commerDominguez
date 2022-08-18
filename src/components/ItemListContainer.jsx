@@ -4,6 +4,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 import { data } from "../mocks/FakeApi";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 
 const ItemListContainer = ({greeting}) =>{
@@ -13,10 +14,24 @@ const ItemListContainer = ({greeting}) =>{
     const { category } = useParams ()
 
 
+
+    useEffect(() => {
+        const db = getFirestore()
     
+        const itemsCollection = collection(db, "items")
+        getDocs(itemsCollection)
+            .then((snapshot) => {
+                const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data() }))
+                console.log(data)
+                setListProducts(data)
+    
+            })
+            .catch((error) => console.error(error))
+            .finally(()=> setLoading(false))
+    }, [category])
     
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         data
         .then((res) => {
             if(!category){
@@ -27,7 +42,7 @@ const ItemListContainer = ({greeting}) =>{
         }) 
         .catch((error) => console.log(error))
         .finally(()=> setLoading(false))
-    },[category])
+    },[category])*/
 
 
 
