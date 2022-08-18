@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { useState } from 'react'
+
 
 const ItemCount = ({ stock, onAdd, count, setCount }) => {
     
@@ -71,6 +71,7 @@ const ItemCount = ({ stock, onAdd, count, setCount }) => {
                     margin: "0 0 1rem 1rem",
                     }} 
                     onClick={onAdd}
+                    disabled={count === 0}
                     >Agregar</button>
     </div>
 
