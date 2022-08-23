@@ -13,7 +13,7 @@ const Categories = () => {
 
         getDocs(categoriesCollection)
         .then((snapshot) =>{
-            setCategories(snapshot.docs.map((doc) => doc.data()))
+            setCategories(snapshot.docs.map((doc) => doc.data().name))
         })
         .catch((error) => console.error(error))
 
@@ -21,7 +21,7 @@ const Categories = () => {
     return(
         <>
         {categories.map((el) =>(
-            <li className="nav-item dropdown" key={el}>
+            <li className="nav-item dropdown link" key={el}>
                 <Link className="dropdown-item" to={"/categoria/" + el}>
                     {el.charAt(0).toUpperCase() + el.slice(1)}
                 </Link>
