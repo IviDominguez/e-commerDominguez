@@ -10,14 +10,16 @@ import Home from './pages/Home';
 import { CartProvider } from './context/CartContext';
 import Cart from './views/Cart';
 import { useEffect, useState } from 'react';
-import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getFirestore } from "firebase/firestore";
+import { products } from "./mocks/FakeApi"
+import Checkout from './views/Checkout';
 
 
 
 function App() {
   const [value, setValue] = useState("")
 
-  useEffect(() => {
+  /*useEffect(() => {
     const db = getFirestore()
 
     const pikachuRef = doc(db, "items", "vveSsyjFlZsGnT3OCGUf")
@@ -35,7 +37,13 @@ function App() {
 
       })
       .catch((error) => console.error(error))
-  }, [])
+  }, [])*/
+
+  /*useEffect(() => {
+    const db = getFirestore()
+    const itemsCollection = collection(db, "items")
+    products.map((item) => addDoc(itemsCollection, item))
+  }, [])*/
 
 
   return (
@@ -49,6 +57,7 @@ function App() {
           <Route path="/categoria/:category" element={<ItemListContainer greeting = "Tu PokeTienda!" />}></Route>
           <Route path="/detalle/:id" element={<ItemDetailContainer/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/checkout" element={<Checkout/>}></Route>
         </Routes>
         </CartProvider>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 
 
-const products = [
-    {
+export const products = [
+    /*{
         id: "1",
         name: "Pikachu",
         description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color amarillo.",
@@ -19,9 +19,9 @@ const products = [
         img: "https://i.postimg.cc/DwhxCmXs/eevee.jpg",
         category: "originales",
 
-    },
+    },*/
     {
-        id: "3",
+        
         name: "Vulpix",
         description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color naranja.",
         price: 100,
@@ -31,7 +31,7 @@ const products = [
 
     },
     {
-        id: "4",
+        
         name: "Bulbasaur",
         description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color verde.",
         price: 80,
@@ -41,7 +41,7 @@ const products = [
 
     },
     {
-        id: "5",
+        
         name: "Vaporeon",
         description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color azul.",
         price: 150,
@@ -51,7 +51,7 @@ const products = [
 
     },
     {
-        id: "6",
+        
         name: "Mr. Mime",
         description: "Peluche pokemon. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color rosa.",
         price: 150,
@@ -61,7 +61,7 @@ const products = [
 
     },
     {
-        id: "7",
+        
         name: "Pikazard",
         description: "Peluche pokemon. Pikachu disfrazado de Charizard. Tamaño: 30cm de alto y 17cm de ancho (aprox.). Color amarillo y naranja.",
         price: 500,
@@ -71,7 +71,7 @@ const products = [
 
     },
     {
-        id: "8",
+        
         name: "Pikavee",
         description: "Peluche pokemon. Pikachu disfrazado de Eevee. Tamaño: 30cm de alto y 17cm de ancho (aprox.). Color amarillo y marrón.",
         price: 400,
@@ -81,7 +81,7 @@ const products = [
 
     },
     {
-        id: "9",
+        
         name: "Pikapix",
         description: "Peluche pokemon. Pikachu disfrazado de Vulpix. Tamaño: 30cm de alto y 17cm de ancho (aprox.). Color amarillo y naranja.",
         price: 400,
@@ -91,7 +91,7 @@ const products = [
 
     },
     {
-        id: "10",
+        
         name: "Ditto-Bulbasaur",
         description: "Peluche pokemon. Ditto tranformado en Bulbasaur. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color celeste.",
         price: 300,
@@ -101,7 +101,7 @@ const products = [
 
     },
     {
-        id: "11",
+        
         name: "Ditto-Lapras",
         description: "Peluche pokemon. Ditto tranformado en Lapras. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color celeste.",
         price: 300,
@@ -111,7 +111,7 @@ const products = [
 
     },
     {
-        id: "12",
+        
         name: "Ditto-Squirtle",
         description: "Peluche pokemon. Ditto tranformado en Squirtle. Tamaño: 27cm de alto y 15cm de ancho (aprox.). Color celeste.",
         price: 300,
