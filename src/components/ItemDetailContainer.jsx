@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { data } from "../mocks/FakeApi";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
@@ -11,11 +11,16 @@ const ItemDetailContainer = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        data
-        .then((res) => setProduct(res.find((item) => item.id === id)))
+        const db = getFirestore()
+        const productRef = doc(db, "items", id)
+        getDoc(productRef)
+        .then((snapshot) => {
+            setProduct({...snapshot.data(), id: snapshot.id})
+        })
         .catch((error) => console.log(error))
         .finally(()=> setLoading(false))
-    }, [])
+
+    }, [id])
     
     return(
         <div style={{display: "flex",
@@ -23,7 +28,7 @@ const ItemDetailContainer = () => {
                     alignItems: "center",
                     marginTop: "3rem",
                     }}>
-            {loading ? <p>Cargando...</p> : <ItemDetail product = {product}/>}
+            {loading ? <p>Cargando...</p> : <ItemDetail key = {product.id} product = {product}/>}
 
         </div>
     )

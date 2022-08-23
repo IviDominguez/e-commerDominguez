@@ -8,7 +8,7 @@ const products = [
         price: 100,
         stock: 15,
         img: "https://i.postimg.cc/xCyFrTxJ/pikachu.jpg",
-        category: "Originales",
+        category: "originales",
     },
     {
         id: "2",
@@ -17,7 +17,7 @@ const products = [
         price: 80,
         stock: 4,
         img: "https://i.postimg.cc/DwhxCmXs/eevee.jpg",
-        category: "Originales",
+        category: "originales",
 
     },
     {
@@ -27,7 +27,7 @@ const products = [
         price: 100,
         stock: 7,
         img: "https://i.postimg.cc/jd0c5Cv9/vulpix.jpg",
-        category: "Originales",
+        category: "originales",
 
     },
     {
@@ -37,7 +37,7 @@ const products = [
         price: 80,
         stock: 7,
         img: "https://i.postimg.cc/2Sj4bWWH/Bulbasaur.jpg",
-        category: "Originales",
+        category: "originales",
 
     },
     {
@@ -47,7 +47,7 @@ const products = [
         price: 150,
         stock: 1,
         img: "https://i.postimg.cc/CxQ3J1Xw/Vaporeon.jpg",
-        category: "Originales",
+        category: "originales",
 
     },
     {
@@ -57,7 +57,7 @@ const products = [
         price: 150,
         stock: 1,
         img: "https://i.postimg.cc/jdxWZbj2/Mr-Mime.jpg",
-        category: "Originales",
+        category: "originales",
 
     },
     {
@@ -67,7 +67,7 @@ const products = [
         price: 500,
         stock: 2,
         img: "https://i.postimg.cc/TYNB015C/pikachu-charizard.jpg",
-        category: "Disfrazados",
+        category: "disfrazados",
 
     },
     {
@@ -77,7 +77,7 @@ const products = [
         price: 400,
         stock: 3,
         img: "https://i.postimg.cc/YCP95QjV/pikachu-eevee.jpg",
-        category: "Disfrazados",
+        category: "disfrazados",
 
     },
     {
@@ -87,7 +87,7 @@ const products = [
         price: 400,
         stock: 3,
         img: "https://i.postimg.cc/Y0TDcnK0/pikachu-vulpix.jpg",
-        category: "Disfrazados",
+        category: "disfrazados",
 
     },
     {
@@ -97,7 +97,7 @@ const products = [
         price: 300,
         stock: 5,
         img: "https://i.postimg.cc/7ZTg5Pv5/ditto-bulbasaur.jpg",
-        category: "Dittos",
+        category: "dittos",
 
     },
     {
@@ -107,7 +107,7 @@ const products = [
         price: 300,
         stock: 4,
         img: "https://i.postimg.cc/sXRFk2z7/ditto-lapras.jpg",
-        category: "Dittos",
+        category: "dittos",
 
     },
     {
@@ -117,7 +117,7 @@ const products = [
         price: 300,
         stock: 4,
         img: "https://i.postimg.cc/xTB6x4nb/ditto-squirtle.jpg",
-        category: "Dittos",
+        category: "dittos",
 
     },
 

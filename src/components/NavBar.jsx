@@ -2,6 +2,7 @@ import CartWidget from "./CartWidget";
 
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import Categories from "./Categories";
 
 
 const NavBar = () =>{
@@ -26,11 +27,8 @@ const NavBar = () =>{
         <p className="link dropdown-toggle" role="button" data-bs-toggle="dropdown" 
             aria-expanded="false">Productos</p>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><Link className="dropdown-item" to="/categoria/Originales">Originales</Link></li>
-            <li><Link className="dropdown-item" to="/categoria/Disfrazados">Disfrazados</Link></li>
-            <li><Link className="dropdown-item" to="/categoria/Dittos">Dittos</Link></li>
-            <li><Link className="dropdown-item" to="/categoria/Shiny">Shiny</Link></li>
-            <li><Link className="dropdown-item" to="/productos">Todos los productos</Link></li>
+              <Categories/>
+
             </ul>
         </li>
       </ul>
@@ -47,3 +45,10 @@ const NavBar = () =>{
 export default NavBar;
 
 
+
+
+/*<li><Link className="dropdown-item" to="/categoria/originales">Originales</Link></li>
+<li><Link className="dropdown-item" to="/categoria/disfrazados">Disfrazados</Link></li>
+<li><Link className="dropdown-item" to="/categoria/dittos">Dittos</Link></li>
+<li><Link className="dropdown-item" to="/categoria/shiny">Shiny</Link></li>
+<li><Link className="dropdown-item" to="/productos">Todos los productos</Link></li>*/

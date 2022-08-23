@@ -1,10 +1,9 @@
-import ItemCount from "./ItemCount";
+
 import { useEffect } from "react";
 import { useState } from "react";
 import ItemList from "./ItemList";
-import { data } from "../mocks/FakeApi";
 import { useParams } from "react-router-dom";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = ({greeting}) =>{
@@ -19,32 +18,27 @@ const ItemListContainer = ({greeting}) =>{
         const db = getFirestore()
     
         const itemsCollection = collection(db, "items")
-        getDocs(itemsCollection)
+        if (category){
+            const q = query(itemsCollection, where("category", "==",category))
+            getDocs(q)
+                .then((snapshot) => {
+                    setListProducts(
+                        snapshot.docs.map((doc) => ({...doc.data(), category: doc.category }))
+                    )
+                })
+                .catch((error) => console.error(error))
+                .finally(()=> setLoading(false))
+        }else{
+            getDocs(itemsCollection)
             .then((snapshot) => {
-                const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data() }))
-                console.log(data)
-                setListProducts(data)
-    
+                setListProducts(
+                    snapshot.docs.map((doc) => ({...doc.data(), id: doc.id }))
+                )
             })
             .catch((error) => console.error(error))
             .finally(()=> setLoading(false))
+        }  
     }, [category])
-    
-
-    /*useEffect(()=>{
-        data
-        .then((res) => {
-            if(!category){
-                setListProducts(res)
-            }else{
-                setListProducts(res.filter((product)=> product.category === category))
-            }
-        }) 
-        .catch((error) => console.log(error))
-        .finally(()=> setLoading(false))
-    },[category])*/
-
-
 
     return(
         <div>
