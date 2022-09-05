@@ -8,13 +8,9 @@ const ItemDetail = ({product}) => {
     const { id, name, description, img, price, stock } = product
     const [count, setCount] = useState(0)
     const [buy, setBuy] = useState(false)
-
     const navigate = useNavigate()
     const volver = useNavigate()
-    
     const { addItem } = useCart ()
-    
-    
     const onAdd = () => {
         let itemToBuy = {
             id,
@@ -24,72 +20,42 @@ const ItemDetail = ({product}) => {
             quantity: count
         }
         setBuy(true)
-
         addItem(itemToBuy)
-
     }
     
-    
     return(
-        <div style={{width: "30rem",
-                    height: "55rem",
-                    border: "5px solid rgb(155, 97, 179)",
-                    borderRadius: "15px",
-                    fontFamily: 'Franklin Gothic Medium',
-                    color: "rgb(155, 97, 179)",
-                    }}>
-            <h2 style={{fontSize: "30px",
-                        paddingLeft: "3rem",}}
-            >Detalle del Producto: {name}</h2>
-
-            <img style={{paddingLeft: "3rem",}} src={img} alt={name} />
-
-            <p style={{fontSize: "18px",
-                        paddingLeft: "2rem",}}
-            >{description}</p>
-            
-            <p style={{fontSize: "18px",
-                        paddingLeft: "2rem",}}
-            >$ {price}</p>
-            
-            <p style={{fontSize: "18px",
-                        paddingLeft: "2rem",}}
-            >Stock: {stock}</p>
-
-            { buy ? <div>
-                <button style={{
-                    width: "150px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    backgroundColor: 'rgb(155, 97, 179)',
-                    fontFamily: 'Franklin Gothic Medium',
-                    fontSize: "15px",
-                    margin: "0 0 1rem 1rem",
-                    }} onClick={()=>{navigate("/productos")}}>Seguir comprando</button>
-                <button style={{
-                    width: "150px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    backgroundColor: 'rgb(155, 97, 179)',
-                    fontFamily: 'Franklin Gothic Medium',
-                    fontSize: "15px",
-                    margin: "0 0 1rem 1rem",
-                    }} onClick={()=>{navigate("/cart")}}>Ir al carrito</button>
-
+        <div>
+            <div className="divDetail">
+                <div className="divDetail2">
+                    <img className="imgDetail" src={img} alt={name} />
+                </div>
+                <div className="divDetail3">
+                    <h2 className="h2Detail">Detalle del Producto: {name}</h2>
+                    <p className="parrafoDetail">{description}</p>
+                    <p className="parrafoDetail2">$ {price}</p>
+                    <p className="parrafoDetail3">Stock: {stock}</p>
+                </div>
             </div>
             
-            : <ItemCount initial={1} stock={product.stock} onAdd={onAdd} count={count} setCount={setCount} />}
+            
+            { buy ? <div>
+                <button className="buttonDetail" 
+                        onClick={()=>{navigate("/productos")}}>Seguir comprando</button>
+                <button className="buttonDetail2"
+                        onClick={()=>{navigate("/cart")}}>Ir al carrito</button>
+            </div>
+            
+            : <div>
+                <div className="divDetail4">
+                    <ItemCount initial={1} stock={product.stock} onAdd={onAdd} count={count} setCount={setCount} />
+                </div> 
 
-            <button style={{
-                    width: "80px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    backgroundColor: 'rgb(155, 97, 179)',
-                    fontFamily: 'Franklin Gothic Medium',
-                    fontSize: "15px",
-                    margin: "0 0 1rem 1rem",
-                    }} onClick={()=> volver("/productos")}>Volver</button>
-        </div>
+                <div className="divButtonDetail3">
+                    <button className="buttonDetail3" 
+                        onClick={()=> volver("/productos")}>Volver</button>
+                </div>
+            </div>}
+        </div> 
     )
 }
 

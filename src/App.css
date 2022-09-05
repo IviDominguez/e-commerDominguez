@@ -16,16 +16,276 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+}
+.divLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .link{
   color: rgb(106, 25, 138);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding: 0.3rem;
   margin-right: 2rem;
 
 }
+/*COMPONENTS*/
+/*cartItems.jsx*/
+
+.divCartItems{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 3rem;
+}
+.divCartItems2{
+  font-family: 'Franklin Gothic Medium';
+  color: rgb(155, 97, 179);
+}
+.imgCartItems{
+  padding-left: 3rem;
+}
+.h2CartItems{
+  font-size: 30px;
+  padding-left: 3rem;
+}
+.parrafoCartItems{
+  font-size: 18px;
+  padding-left: 2rem;
+}
+.parrafoCartItems2{
+  font-size: 18px;
+  padding-left: 2rem;
+}
+.buttonCartItems{
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  margin: 0 0 1rem 1rem;
+}
+
+/*cartWidget.jsx*/
+
+.divWidget{
+  display: flex;
+  align-items: center;
+}
+.imgWidget{
+  width: 60px;
+  height: 50px;
+  margin-right: 2rem;
+}
+.h4Widget{
+  color: black;
+  font-size: 20px;
+  margin-right: 3rem;
+}
+
+/*Item.jsx*/
+
+.cardItem{
+  width: 18rem;
+  border-radius: 18px;
+  font-family: 'Franklin Gothic Medium';
+
+}
+.cardText{
+  font-size: 12px;
+}
+
+/*ItemCount.jsx*/
+
+.divCount{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin: 0 0.5rem 1rem 1rem;
+}
+.buttonCount{
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  margin-right: 1rem;
+}
+.spanCount{
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+}
+.buttonCount2{
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  margin-left: 1rem;
+}
+.divCount2{
+
+
+  margin-left: 5rem;
+}
+.buttonCount3{
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  color: black;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 25px;
+
+}
+
+/*ItemDetail.jsx*/
+
+.divDetail{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium';
+  color: rgb(155, 97, 179);
+  
+}
+.divDetail2{
+
+}
+.imgDetail{
+margin: 0 4rem 2rem 0;
+
+  
+}
+.divDetail3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 30rem;
+  height: 20rem;
+  margin: 0 0 2rem 4rem;
+}
+.h2Detail{
+  font-size: 30px;
+  padding-left: 3rem;
+}
+
+.parrafoDetail{
+  font-size: 18px;
+  padding-left: 2rem;
+}
+.parrafoDetail2{
+  font-size: 18px;
+  padding-left: 2rem;
+}
+.parrafoDetail3{
+  font-size: 18px;
+  padding-left: 2rem;
+}
+.buttonDetail{
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  margin: 0 0 1rem 1rem;
+}
+.buttonDetail2{
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  margin: 0 0 1rem 1rem;
+}
+.divDetail4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 10rem;
+}
+.divButtonDetail3{
+  display: flex;
+  justify-content: flex-end;
+}
+.buttonDetail3{
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 15px;
+  margin: 0 0 1rem 1rem;
+}
+
+/*ItemDetailContainer.jsx*/
+
+.divDetailContainer{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/*ItemList.jsx*/
+
+.divList{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 8rem 3rem 8rem;
+}
+
+/*ItemListContainer.jsx*/
+
+.h2ListContainer{
+  background-color: rgb(155, 97, 179);
+  width: 230px;
+  border-radius: 18px;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium';
+  margin: 3rem; 
+  padding-left: 6px;
+}
+
+
+/*PAGES*/
+/*Home.jsx*/
+.divHome{
+  color: rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 80px;
+  
+}
+.h1Home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+}
+.imgHome{
+margin: 0 0 3rem 8rem;
+}
+
+
+/*VIEWS*/
+/*Cart.jsx*/
+
+
+
+
+
+/*Checkout.jsx*/

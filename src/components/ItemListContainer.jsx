@@ -23,7 +23,7 @@ const ItemListContainer = ({greeting}) =>{
             getDocs(q)
                 .then((snapshot) => {
                     setListProducts(
-                        snapshot.docs.map((doc) => ({...doc.data(), category: doc.category }))
+                        snapshot.docs.map((doc) => ({...doc.data(), id: doc.id }))
                     )
                 })
                 .catch((error) => console.error(error))
@@ -42,31 +42,10 @@ const ItemListContainer = ({greeting}) =>{
 
     return(
         <div>
-            <h2 
-                style={{backgroundColor: "rgb(155, 97, 179)",
-                        width: "230px",
-                        borderRadius: "18px", 
-                        fontSize: "25", 
-                        fontFamily: 'Franklin Gothic Medium',
-                        margin: "3rem", 
-                        paddingLeft: "6px"}}
-                >{greeting}
-            </h2>
-
+            <h2 className="h2ListContainer">{greeting}</h2>
             { loading ? <p>Cargando...</p> : <ItemList listProducts = {listProducts} />} 
-            
-            
-            
-            
-
         </div>
     )
-    
-    
-
-    
 };
 
-
-export default ItemListContainer;
-
+export default ItemListContainer

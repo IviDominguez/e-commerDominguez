@@ -54,7 +54,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/productos" element={<ItemListContainer greeting = "Tu PokeTienda!" />}></Route>
-          <Route path="/categoria/:category" element={<ItemListContainer greeting = "Tu PokeTienda!" />}></Route>
+          <Route path="/categoria/:category" element={<ItemListContainer/>}></Route>
           <Route path="/detalle/:id" element={<ItemDetailContainer/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/checkout" element={<Checkout/>}></Route>

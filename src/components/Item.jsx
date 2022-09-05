@@ -10,16 +10,12 @@ const Item = ({ product }) => {
     const {name, id, img, price} = product
     const navegar = useNavigate()
     return(
-        <Card style={{ 
-            width: '18rem',
-            borderRadius: "18px",
-            fontFamily: 'Franklin Gothic Medium',
-            }}>
+        <Card className="cardItem">
         <Card.Img variant="top" src={img} alt={name} />
         <Card.Body>
             <Card.Title>{name}</Card.Title>
 
-            <Card.Text style={{fontSize: "12px",}}>${`${price}`}</Card.Text>    
+            <Card.Text className='cardText'>${`${price}`}</Card.Text>    
 
             <Button variant="primary" onClick={()=> navegar(`/detalle/${id}`)}>Ver producto</Button>
         </Card.Body>

@@ -1,6 +1,4 @@
-
 import React from 'react'
-
 
 const ItemCount = ({ stock, onAdd, count, setCount }) => {
     
@@ -12,7 +10,6 @@ const ItemCount = ({ stock, onAdd, count, setCount }) => {
 
     const restar = () => {
         if(count > 0 ){
-
             setCount(count - 1)
         } 
     }
@@ -20,62 +17,18 @@ const ItemCount = ({ stock, onAdd, count, setCount }) => {
 
     return (
     <>
-    <div style={{
-                display:'flex', 
-                alignItems:'center',
-                justifyContent: "center",
-                margin: " 0 0 1rem 1rem",
-                }}>
+    <div className='divCount'>
 
-        <button style={{width: "40px",
-                        height: "30px",
-                        borderRadius: "10px",
-                        backgroundColor: 'rgb(155, 97, 179)',
-                        fontFamily: 'Franklin Gothic Medium',
-                        fontSize: "15px",
-                        marginRight: "1rem",
-                        }} 
-                        onClick={restar}
-                        >-</button>
+        <button className='buttonCount' onClick={restar}>-</button>
 
-        <span style={{fontFamily: 'Franklin Gothic Medium',
-                    fontSize: "15px",
-                    }}
-                    >{count}</span>
+        <span className='spanCount'>{count}</span>
 
-        <button style={{width: "40px",
-                        height: "30px",
-                        borderRadius: "10px",
-                        backgroundColor: 'rgb(155, 97, 179)',
-                        fontFamily: 'Franklin Gothic Medium',
-                        fontSize: "15px",
-                        marginLeft: "1rem",
-                        }} 
-                        onClick={sumar}
-                        >+</button>
+        <button className='buttonCount2' onClick={sumar}>+</button>
     </div>
 
-    <div style={{
-                display:'flex', 
-                alignItems:'center',
-                justifyContent: "center",
-                marginBottom: "1rem",
-                }}>
-        <button style={{
-                    width: "80px",
-                    height: "40px",
-                    borderRadius: "10px",
-                    backgroundColor: 'rgb(155, 97, 179)',
-                    fontFamily: 'Franklin Gothic Medium',
-                    fontSize: "15px",
-                    margin: "0 0 1rem 1rem",
-                    }} 
-                    onClick={onAdd}
-                    disabled={count === 0}
-                    >Agregar</button>
+    <div className='divCount2'>
+        <button className='buttonCount3' onClick={onAdd} disabled={count === 0}>Lo quiero!</button>
     </div>
-
-    
     </>
     )
 }

@@ -23,16 +23,10 @@ const ItemDetailContainer = () => {
     }, [id])
     
     return(
-        <div style={{display: "flex",
-                    justifyContent: "center", 
-                    alignItems: "center",
-                    marginTop: "3rem",
-                    }}>
+        <div className="divDetailContainer">
             {loading ? <p>Cargando...</p> : <ItemDetail key = {product.id} product = {product}/>}
-
         </div>
     )
 }
-
 
 export default ItemDetailContainer

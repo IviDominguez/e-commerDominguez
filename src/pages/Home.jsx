@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return(
-        <div style={{color: "rgb(155, 97, 179)", 
-                    fontFamily: 'Franklin Gothic Medium',
-                    fontSize: "40px",
-                    marginLeft: "5rem",
-                    }}>HOME</div>
+        <div className="divHome">
+            <h1 className="h1Home">POKETIENDA!</h1>
+            <Link to="/productos"><img className="imgHome" src="https://i.postimg.cc/PqCMb9M4/portada.jpg" alt="name" /></Link>
+        </div>
     )
 }
 
