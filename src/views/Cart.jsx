@@ -13,9 +13,9 @@ const Cart = () => {
                 ?
                     <>
                     <div className="divCart">
-                    <h2 className="h2Cart">No hay productos en tu carrito</h2>
-                    <h4 className="h4Cart">Puedes visitar nuestro shop!</h4>
-                    <button className="buttonCart" onClick={() => navigate("/productos")}>Ver productos</button>
+                        <h2 className="h2Cart">No hay productos en tu carrito</h2>
+                        <h4 className="h4Cart">Puedes visitar nuestro shop!</h4>
+                        <button className="buttonCart" onClick={() => navigate("/productos")}>VER PRODUCTOS</button>
                     </div>
                     </>
                 : 
@@ -26,10 +26,18 @@ const Cart = () => {
                     </div>
                     
                     <div className="divSpanCart">
-                        <span className="spanCart">Resumen de compra</span>
-                        <span className="spanCart">Total a pagar: ${finalPrice()}</span>
-                        <button className="buttonCart2" onClick={() => navigate("/checkout")}>Finalizar compra</button>
-                        <button className="buttonCart2" onClick={cleanCart}>Vaciar carrito</button>
+                        <div className="divH2Cart3">
+                            <h2 className="h2Cart3">RESUMEN DE COMPRA</h2>
+                        </div>
+                        
+                        
+                        <div className="divButtonCart2">
+                            <span className="spanCart">Total a pagar: ${finalPrice()}</span>
+                            <button className="buttonCart2" onClick={cleanCart}>Vaciar carrito</button>
+                            <button className="buttonCart2" onClick={() => navigate("/checkout")}>Finalizar compra</button>
+                            
+                        </div>
+                        
                     </div>
                     </>}
             </div>)
