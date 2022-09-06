@@ -38,13 +38,20 @@
 
 .divCartItems{
   display: flex;
-  justify-content: space-between; 
-  align-items: center;
+  justify-content: flex-start; 
+  align-items: flex-start;
   padding: 3rem;
 }
 .divCartItems2{
+  display: flex;
+  justify-content: space-between;
   font-family: 'Franklin Gothic Medium';
   color: rgb(155, 97, 179);
+  border: 3px solid rgb(155, 97, 179);
+  border-radius: 10px;
+  width: 700px;
+  height: 80px;
+  margin: 3rem 0 0.5rem 0;
 }
 .imgCartItems{
   padding-left: 3rem;
@@ -252,13 +259,13 @@ margin: 0 4rem 2rem 0;
 /*ItemListContainer.jsx*/
 
 .h2ListContainer{
-  background-color: rgb(155, 97, 179);
-  width: 230px;
-  border-radius: 18px;
-  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  color: rgb(155, 97, 179);
+  font-size: 30px;
   font-family: 'Franklin Gothic Medium';
-  margin: 3rem; 
-  padding-left: 6px;
+  margin: 3rem 0 3rem 0; 
+
 }
 
 
@@ -283,7 +290,49 @@ margin: 0 0 3rem 8rem;
 
 /*VIEWS*/
 /*Cart.jsx*/
+.h2Cart2{
+  color:rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 30px;
+  margin: 3rem 0 0 3rem;
+}
+.divCart2{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: center;
+}
+.divSpanCart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 3px solid rgb(155, 97, 179);
+  border-radius: 10px;
+  margin: 0 8rem 2rem 8rem;
+}
+.spanCart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+  color:rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+.buttonCart2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+  color:rgb(155, 97, 179);
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
 
+  border: 3px solid rgb(155, 97, 179);
+  border-radius: 10px;
+}
 
 
 

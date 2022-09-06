@@ -20,14 +20,17 @@ const Cart = () => {
                     </>
                 : 
                     <>
-                    <h2 className="h2Cart2">Tus productos</h2>
-                    {cart.map((art) => <CartItems key={art.id} art={art}/>)}
-                    <span className="spanCart">Total a pagar: ${finalPrice()}</span>
+                    <h2 className="h2Cart2">Mi carrito</h2>
                     <div className="divCart2">
-                        <button className="buttonCart2" onClick={() => navigate("/checkout")}>Finalizar compra</button>
-                        <button className="buttonCart3" onClick={cleanCart}>Vaciar carrito</button>
+                        {cart.map((art) => <CartItems key={art.id} art={art}/>)}
                     </div>
                     
+                    <div className="divSpanCart">
+                        <span className="spanCart">Resumen de compra</span>
+                        <span className="spanCart">Total a pagar: ${finalPrice()}</span>
+                        <button className="buttonCart2" onClick={() => navigate("/checkout")}>Finalizar compra</button>
+                        <button className="buttonCart2" onClick={cleanCart}>Vaciar carrito</button>
+                    </div>
                     </>}
             </div>)
 
