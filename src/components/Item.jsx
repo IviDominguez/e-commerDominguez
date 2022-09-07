@@ -26,13 +26,3 @@ const Item = ({ product }) => {
 
 export default Item;
 
-        /*<Card className="cardItem">
-        <Card.Img variant="top" src={img} alt={name} />
-        <Card.Body>
-            <Card.Title>{name}</Card.Title>
-
-            <Card.Text className='cardText'>${`${price}`}</Card.Text>    
-
-            <Button variant="primary" onClick={()=> navegar(`/detalle/${id}`)}>Ver producto</Button>
-        </Card.Body>
-        </Card>*/
