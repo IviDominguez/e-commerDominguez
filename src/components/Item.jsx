@@ -14,9 +14,9 @@ const Item = ({ product }) => {
         <Card border="light" className="mb-2">
         <Card.Img variant="top" src={img} alt={name} />
         <Card.Body>
-            <Card.Header>{name}</Card.Header>
-            <Card.Text className='cardText'>${`${price}`}</Card.Text>    
-            <Button variant="dark" className='buttonCardItem' onClick={()=> navegar(`/detalle/${id}`)}>Ver peluches</Button>
+            <Card.Header as="h5">{name}</Card.Header>
+            <Card.Text as="h6">${`${price}`}</Card.Text>    
+            <Button variant="dark" className='buttonCardItem' onClick={()=> navegar(`/detalle/${id}`)}>Ver peluche</Button>
         </Card.Body>
         </Card>
 

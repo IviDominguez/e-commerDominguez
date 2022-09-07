@@ -301,18 +301,12 @@ margin: 4rem 1rem 0 3rem;
   justify-content: center;
   align-items: center;
   margin: 3rem 0 3rem 0;
-
-  
 }
 .h1Home{
   color: rgb(155, 97, 179);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 90px;
 }
-.imgHome{
-
-}
-
 
 /*VIEWS*/
 /*Cart.jsx*/
