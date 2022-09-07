@@ -15,7 +15,6 @@ import Checkout from './views/Checkout';
 
 function App() {
 
-
   return (
 
       <BrowserRouter>
